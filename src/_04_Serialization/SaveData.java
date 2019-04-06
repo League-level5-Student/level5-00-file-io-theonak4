@@ -1,5 +1,5 @@
 package _04_Serialization;
-//
+
 /*
  * Complete this class so that it can be serialized.
  */

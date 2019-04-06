@@ -10,22 +10,24 @@ public class FileEncryptor {
 	// Use the methods in the String and Character classes to save
 	// an encrypted form of the message to a file
 	public static void main(String[] args) {
-		String input = JOptionPane.showInputDialog("What would you like to add to the file?");
-		String encryptedString = AES.encrypt(input, "RED033493711");
+		String s = JOptionPane.showInputDialog("what would you like to write in the file?");
+	
+		String a = s.replace('a','b' );
+		String e = a.replace('e','f' );
+		String i = e.replace('i','j' );
+		String o = i.replace('o','p' );
+		String u = o.replace('u','v' );
+		
 		try {
-			FileWriter fw = new FileWriter("/Users/League/git/level5-00-file-io-theonak4/src/_02_File_Encrypt_Decrypt/test.txt");
+			FileWriter fw = new FileWriter("src/_02_File_Encrypt_Decrypt/test.txt");
 			
-			/*
-			NOTE: To append to a file that already exists, add true as a second parameter when calling the
-			      FileWriter constructor.
-			      (e.g. FileWriter fw = new FileWriter("src/_00_Intro_To_File_Input_and_Output/test2.txt", true);)
-			*/
-			
-			fw.write(encryptedString);
+			fw.write(u);
 				
 			fw.close();
-		} catch (IOException e) {
-			e.printStackTrace();
+		} catch (IOException ex) {
+			ex.printStackTrace();
 		}
 	}
+	
+	
 }
